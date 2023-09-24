@@ -14,4 +14,11 @@ class Problem1 {
                 .map(Character::getNumericValue)
                 .sum();
     }
+
+    private int maxMulValue(Integer integerVal) {
+        return String.valueOf(integerVal)
+                .chars()
+                .map(Character::getNumericValue)
+                .reduce(1, (a, b) -> (a * b));
+    }
 }
