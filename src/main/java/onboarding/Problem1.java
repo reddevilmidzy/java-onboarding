@@ -7,4 +7,11 @@ class Problem1 {
         int answer = Integer.MAX_VALUE;
         return answer;
     }
+
+    private int maxAddValue(Integer integerVal) {
+        return String.valueOf(integerVal)
+                .chars()
+                .map(Character::getNumericValue)
+                .sum();
+    }
 }
