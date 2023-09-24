@@ -4,14 +4,18 @@ import java.util.List;
 
 class Problem1 {
     public static int solution(List<Integer> pobi, List<Integer> crong) {
-        int answer = Integer.MAX_VALUE;
-        return answer;
+        return compare(pobi, crong);
     }
 
-    public int compare(List<Integer> pobi, List<Integer> crong) {
+    public static int compare(List<Integer> pobi, List<Integer> crong) {
         int pobiVal = maxValue(pobi);
         int crongVal = maxValue(crong);
 
+        if (pobiVal > crongVal) {
+            return 1;
+        } else if (pobiVal < crongVal) {
+            return 2;
+        }
         return 0;
     }
 
