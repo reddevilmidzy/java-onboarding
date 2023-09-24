@@ -21,6 +21,7 @@ public class Problem6 {
 
         return emails.stream()
                 .distinct()
+                .sorted()
                 .collect(Collectors.toList());
     }
 }
